@@ -3,10 +3,11 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
 dotenv.config();
+const cors = require('cors'); 
 
 const app = express();
 const port = 3007;
-
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
